@@ -1,0 +1,14 @@
+ const addFavorites = () => {
+
+    const localStorgeContent = localStorage.getItem('DataString');
+    let DataString;
+
+    if (localStorgeContent === null) {
+      DataString = [];
+    } else {
+      DataString = JSON.parse(localStorgeContent);
+    }
+
+    if (!DataString.includes(key)) {
+      DataString.push(key);
+    }
